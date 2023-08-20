@@ -1,0 +1,73 @@
+def net_monthly_function():
+    
+    tax_rates = {
+    #Current Tax rates for 2023
+    44725: 0.12,
+    95375: 0.22,
+    182100: 0.24,
+    231250: 0.32,
+    231251: 0.35
+    }
+    print ('\nWelcome to Duc Mai wealth creater help. If you Gross less then $920 monthly PLEASE work on yourself and improve your skill \nlevel before using this calculator. It will not work correctly for you.')
+    print ('These rates are based on 2023 (single/individual) income tax brackets released by the IRS. Please check for yourself first. Only use this tool for entertainment purposes.')
+    net_income = int(input ('How much do you want net (Take Home) monthly?'))
+    net_monthly_12 = net_income * 12
+    
+    if net_monthly_12 < 39358:
+        # Calculate the gross income based on the net income and tax rate
+        base = net_monthly_12 / (1-tax_rates[44725])
+        #net_monthly = net_income/12
+        taxed_taken_by_govt = base * tax_rates[44725]
+        tax_percentage = 100 * tax_rates[44725]
+        print (f'You need to make {round(base, 2)} a year before taxes')
+        print (f'Your monthly net/take home is {net_income}')
+        print (f'The amount annually taken from you by the government is ${round(taxed_taken_by_govt,2)}')
+        print (f'Your tax rate is {str(int(tax_percentage))}' + '%')
+        return 'Thank You for using this program created by Duc Mai. Good luck on your successful financial journey'
+    
+    elif net_monthly_12 < 74392:
+        base = net_monthly_12 / (1-tax_rates[95375])
+        #net_monthly = net_income/12
+        taxed_taken_by_govt = base * tax_rates[95375]
+        tax_percentage = 100 * tax_rates[95375]
+        print (f'You need to make {round(base,2)} a year before taxes')
+        print (f'Your monthly net/take home is {net_income}')
+        print (f'The amount annually taken from you by the government is ${round(taxed_taken_by_govt,2)}')
+        print (f'Your tax rate is {str(int(tax_percentage))}' + '%')
+        return 'Thank You for using this program created by Duc Mai. Good luck on your successful financial journey'
+    
+    elif net_monthly_12 < 138396:
+        base = net_monthly_12 / (1-tax_rates[182100])
+        #net_monthly = net_income/12
+        taxed_taken_by_govt = base * tax_rates[182100]
+        tax_percentage = 100 * tax_rates[182100]
+        print (f'You need to make {round(base,2)} a year before taxes')
+        print (f'Your monthly net/take home is {net_income}')
+        print (f'The amount annually taken from you by the government is ${round(taxed_taken_by_govt,2)}')
+        print (f'Your tax rate is {str(int(tax_percentage))}' + '%')
+        return 'Thank You for using this program created by Duc Mai. Good luck on your successful financial journey'
+    
+    elif net_monthly_12 < 157249:
+        base = net_monthly_12 / (1-tax_rates[231250])
+        #net_monthly = net_income/12
+        taxed_taken_by_govt = base * tax_rates[231250]
+        tax_percentage = 100 * tax_rates[231250]
+        print (f'You need to make {round(base,2)} a year before taxes')
+        print (f'Your monthly net/take home is {net_income}')
+        print (f'The amount annually taken from you by the government is ${round(taxed_taken_by_govt,2)}')
+        print (f'Your tax rate is {str(int(tax_percentage))}' + '%')
+        return 'Thank You for using this program created by Duc Mai. Good luck on your successful financial journey'
+    
+    else:
+        #This is for incomes over $231,250
+        base = net_monthly_12 / (1-tax_rates[231251])
+        #net_monthly = net_income/12
+        taxed_taken_by_govt = base * tax_rates[231251]
+        tax_percentage = 100 * tax_rates[231251]
+        print (f'You need to make {round(base,2)} a year before taxes')
+        print (f'Your monthly net/take home is {net_income}')
+        print (f'The amount annually taken from you by the government is ${round(taxed_taken_by_govt,2)}')
+        print (f'Your tax rate is {str(int(tax_percentage))}' + '%')
+        return 'Thank You for using this program created by Duc Mai. Good luck on your successful financial journey'
+    
+    

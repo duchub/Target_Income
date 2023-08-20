@@ -1,0 +1,19 @@
+def net_income_target():
+    start = True
+    while start == True:
+        user_decision = input('Would you like to start the net income target helper program? (Y or N)')
+        if user_decision.capitalize() =='Y' or user_decision.capitalize() =='Yes':
+            annual_or_monthly = int (input('Do you want to calculate your target based on annul or monthly target?' '\nType 1 for annually \nType 2 for monthly \nType 3 TO convert Annual Gross income to Net income'))
+            if annual_or_monthly == 1:
+                net_annual()
+            elif annual_or_monthly == 2:
+                net_monthly_function()
+            elif annual_or_monthly == 3:
+                gross_2_net()
+            else:
+                return 'You did not enter a valid input. Program will exit. Please restart if you want to calculate your targets'
+        else:
+            print ('You choose to close/stop the program or may have entered a invalid entry /n PROGRAM CLOSING NOW')
+            start = False
+            
+        
